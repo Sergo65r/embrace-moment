@@ -41,6 +41,6 @@ body.editing{overflow:hidden;background:#eee8e1}body.editing>.header,body.editin
   }
   body.editing .ed-workspace.ed-swipe-guard .ed-element,
   body.editing .ed-workspace.ed-swipe-guard .ed-resize{
-    touch-action:none;
+    touch-action:pan-y;
   }
 }
