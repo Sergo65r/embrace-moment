@@ -22,25 +22,19 @@ body.editing{overflow:hidden;background:#eee8e1}body.editing>.header,body.editin
 
 @media(max-width:700px){.ed-panel.open{bottom:var(--keyboard-bottom,0px);max-height:calc(var(--ed-height,100dvh)*.44)}.keyboard-open .ed-hint,.keyboard-open .ed-navigation,.keyboard-open .ed-actions{display:none}.keyboard-open .ed-main{grid-template-rows:auto minmax(0,1fr);grid-template-areas:"context" "paper"}}
 
-/* Telegram / in-app browser: рабочая зона является настоящим внутренним scroll-контейнером.
-   Большой скрытый запас сверху/снизу не даёт жесту уйти во внешний WebView.
-   JS компенсирует прокрутку, поэтому лист визуально остаётся на месте. */
+/* Профессиональная рабочая область редактора:
+   лист A4 остается неподвижным, а невидимый внутренний scroll-catcher забирает свайпы у Telegram. */
+.ed-workspace{position:relative}
+.ed-paper{overflow:visible}
+.ed-guide-layer{position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:60}
+.ed-guide{position:absolute;display:block;pointer-events:none;background:#c75b50;box-shadow:0 0 0 .5px #fff9;z-index:61}
+.ed-guide-v{top:-80px;bottom:-80px;width:1px}
+.ed-guide-h{left:-80px;right:-80px;height:1px}
+.ed-gesture-layer{display:none}
 @media(max-width:700px){
-  body.editing .ed-workspace.ed-swipe-guard{
-    overflow-y:auto;
-    overscroll-behavior-y:contain;
-    -webkit-overflow-scrolling:touch;
-    touch-action:pan-y;
-  }
-  body.editing .ed-workspace.ed-swipe-guard .ed-paper-wrap{
-    margin-top:700px;
-    margin-bottom:700px;
-  }
-  body.editing .ed-workspace.ed-swipe-guard .ed-paper{
-    touch-action:pan-y;
-  }
-  body.editing .ed-workspace.ed-swipe-guard .ed-element,
-  body.editing .ed-workspace.ed-swipe-guard .ed-resize{
-    touch-action:pan-y;
-  }
+  body.editing .ed-workspace{overflow:hidden;overscroll-behavior:none;touch-action:none}
+  body.editing .ed-paper-wrap{z-index:2}
+  body.editing .ed-gesture-layer{display:block;position:absolute;inset:0;z-index:80;overflow-y:scroll;overflow-x:hidden;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;background:transparent;scrollbar-width:none}
+  body.editing .ed-gesture-layer::-webkit-scrollbar{display:none}
+  body.editing .ed-gesture-spacer{height:2600px;width:1px;pointer-events:none}
 }
