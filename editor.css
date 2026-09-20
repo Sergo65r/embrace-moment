@@ -21,12 +21,14 @@ body.editing{overflow:hidden;background:#eee8e1}body.editing>.header,body.editin
 .ed-workspace.ed-focused{justify-content:flex-start;overscroll-behavior:contain}.ed-focused .ed-paper-wrap{margin:0}
 
 @media(max-width:700px){.ed-panel.open{bottom:var(--keyboard-bottom,0px);max-height:calc(var(--ed-height,100dvh)*.44)}.keyboard-open .ed-hint,.keyboard-open .ed-navigation,.keyboard-open .ed-actions{display:none}.keyboard-open .ed-main{grid-template-rows:auto minmax(0,1fr);grid-template-areas:"context" "paper"}}
-/* Защита рабочей области редактора от свайпа Telegram */
-@media (pointer: coarse) {
-  body.editing .ed-workspace {
-    touch-action: none;
-    overscroll-behavior: none;
-    -webkit-user-select: none;
-    user-select: none;
-  }
+
+/* Рабочая зона редактора забирает сенсорный жест себе.
+   Это не затрагивает кнопки, панели и остальные страницы сайта. */
+body.editing .ed-workspace,
+body.editing .ed-paper-wrap,
+body.editing .ed-paper {
+  touch-action: none !important;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
