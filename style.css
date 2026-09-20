@@ -37,3 +37,6 @@
 .legal-contact{padding:18px 20px;background:#f3ebe5;border-radius:12px}
 .legal-contact a{color:var(--rose);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:700px){.legal-page{padding:28px 16px 60px}.legal-card{padding:21px 18px}.legal-card h2{font-size:27px}.footer-legal{gap:5px 8px}}
+
+.legal-documents a{color:var(--rose);text-decoration:underline;text-underline-offset:3px}
+.legal-documents ul{display:grid;gap:10px}
