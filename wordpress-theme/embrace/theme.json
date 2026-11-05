@@ -1,0 +1,225 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "1180px",
+      "wideSize": "1440px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "paper",
+          "name": "Бумага",
+          "color": "#faf7f3"
+        },
+        {
+          "slug": "ink",
+          "name": "Текст",
+          "color": "#292824"
+        },
+        {
+          "slug": "muted",
+          "name": "Приглушённый текст",
+          "color": "#74706a"
+        },
+        {
+          "slug": "terracotta",
+          "name": "Терракотовый",
+          "color": "#ad7462"
+        },
+        {
+          "slug": "line",
+          "name": "Тонкие линии",
+          "color": "#e5dcd3"
+        },
+        {
+          "slug": "porcelain",
+          "name": "Молочный",
+          "color": "#fffdf9"
+        },
+        {
+          "slug": "sand",
+          "name": "Песочный",
+          "color": "#f2ede6"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "em",
+        "%",
+        "vw"
+      ],
+      "blockGap": true
+    },
+    "typography": {
+      "customFontSize": true,
+      "lineHeight": true,
+      "fontFamilies": [
+        {
+          "name": "Cormorant Garamond",
+          "slug": "cormorant",
+          "fontFamily": "'Cormorant Garamond', Georgia, serif",
+          "fontFace": [
+            {
+              "fontFamily": "Cormorant Garamond",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/bb8f3c3b0ca40380.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Cormorant Garamond",
+              "fontWeight": "500",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/75407d22188550d6.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Cormorant Garamond",
+              "fontWeight": "600",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/705776b6237d1fd4.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Cormorant Garamond",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/a9565983a6247cbc.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Cormorant Garamond",
+              "fontWeight": "400",
+              "fontStyle": "italic",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/374c6c52ce838c05.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Cormorant Garamond",
+              "fontWeight": "500",
+              "fontStyle": "italic",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/73152f8d0c78aab8.ttf"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Manrope",
+          "slug": "manrope",
+          "fontFamily": "Manrope, Arial, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Manrope",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/755fa076675e6f61.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Manrope",
+              "fontWeight": "500",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/e6fa40b6715a310a.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Manrope",
+              "fontWeight": "600",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/900670474e93d412.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Manrope",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/e7e0cf40cb44208e.ttf"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|paper",
+      "text": "var:preset|color|ink"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|manrope",
+      "fontSize": "16px",
+      "lineHeight": "1.6"
+    },
+    "spacing": {
+      "blockGap": "0px"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|cormorant",
+          "fontWeight": "500"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "inherit"
+        },
+        "typography": {
+          "textDecoration": "none"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|terracotta",
+          "text": "#ffffff"
+        },
+        "border": {
+          "radius": "8px"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|manrope"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Шапка Embrace",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Подвал Embrace",
+      "area": "footer"
+    }
+  ]
+}

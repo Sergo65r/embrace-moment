@@ -1,0 +1,13 @@
+dist/
+.qa/
+backups/
+.brief/
+node_modules/
+.env
+.env.*
+wp-config.php
+*.sql
+*.sqlite
+*.sqlite3
+*.log
+wp-content/uploads/
